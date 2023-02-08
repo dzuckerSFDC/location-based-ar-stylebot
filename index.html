@@ -8,7 +8,7 @@
     <script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
     
     <script>
-        AFRAME.registerComponent('registerevents', {
+        AFRAME.registerComponent('markerhandler', {
             init: function() {
                 var marker = this.el;
                 
@@ -35,11 +35,11 @@
             <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/models/CesiumMan.gltf"></a-asset-item>
         </a-assets>
 
-        <a-marker type="pattern" preset="custom" url="https://dzuckersfdc.github.io/location-based-ar-stylebot/assets/pattern-t.patt" id="yellow-cube">
+        <a-marker markerhandler type="pattern" preset="custom" url="https://dzuckersfdc.github.io/location-based-ar-stylebot/assets/pattern-t.patt" id="yellow-cube">
             <a-box position='0 0.5 0' color="yellow"></a-box>
         </a-marker>
 
-        <a-marker type="pattern" preset="custom" url="https://dzuckersfdc.github.io/location-based-ar-stylebot/assets/pattern-ok.patt" id="animated-marker">
+        <a-marker markerhandler type="pattern" preset="custom" url="https://dzuckersfdc.github.io/location-based-ar-stylebot/assets/pattern-ok.patt" id="animated-marker">
             <a-entity
                 gltf-model="#animated-asset"
                 scale="2">
