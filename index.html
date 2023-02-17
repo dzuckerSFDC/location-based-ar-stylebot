@@ -40,7 +40,10 @@
     
     <body style='margin : 0px; overflow: hidden;'>
         <!-- we add detectionMode and matrixCodeType to tell AR.js to recognize barcode markers -->
-        <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3; patternRatio:0.75; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;'>
+        <a-scene antialias="true" embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3; patternRatio:0.75; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;'>
+
+        <!-- Dim ambient lighting. -->
+        <a-light type="ambient" color="#222"></a-light>
 
         <a-assets>
             <!--<a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/models/CesiumMan.gltf"></a-asset-item>-->
