@@ -48,16 +48,18 @@
         <a-assets>
             <!--<a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/models/CesiumMan.gltf"></a-asset-item>-->
             <a-asset-item id="animated-asset" src="assets/arrows-unlit-no-black.glb"></a-asset-item>
-        </a-assets>
+            <img id="pngImage" crossorigin="anonymous" src="assets/Silva_ar_product.png">
+        </a-assets>        
 
         <a-marker markerhandler type="pattern" preset="custom" url="https://dzuckersfdc.github.io/location-based-ar-stylebot/assets/pattern-ok.patt" id="product">
-            <a-plane rotation="-90 0 0" scale="3 3 3" src="assets/Silva_ar_product.png"></a-plane>
+            <!--<a-plane rotation="-90 0 0" scale="3 3 3" src="assets/logo-company-large.png"></a-plane>-->
+            <a-image position = "0 0 0" rotation="-90 0 0" width="6" height="6" src="#pngImage"></a-image>
         </a-marker>
 
         <a-marker markerhandler type="pattern" preset="custom" url="https://dzuckersfdc.github.io/location-based-ar-stylebot/assets/pattern-t.patt" id="floor">
             <a-entity
                 gltf-model="#animated-asset"
-                scale="1">
+                scale="3 3 3">
             </a-entity>
         </a-marker>
 
