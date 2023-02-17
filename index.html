@@ -18,12 +18,14 @@
                     var markerId = marker.id;
                     console.log('markerFound', markerId);
                     // TODO: Add your own code here to react to the marker being found.
-                    if (document.getElementById("dist").innerText == "30 meters away" && markerId == "floor")
-                    document.setElementById("dist").innerText = "15 meters away";
+                    var dist = document.getElementById("dist");
+                    if (dist.innerText == "30 meters away" && markerId == "floor")
+                    dist.innerText = "15 meters away";
 
-                    if (document.getElementById("dist").innerText == "15 meters away" && markerId == "product") {
-                        document.setElementById("dist").innerText = "0 meters away";
-                        document.setElementById("ins").innerText = "You have Arrived!";
+                    if (dist.innerText == "15 meters away" && markerId == "product") {
+                        dist.innerText = "0 meters away";
+                        var ins = document.getElementById("ins");
+                        ins.innerText = "You have Arrived!";
                     }
 
                 });
