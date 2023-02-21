@@ -13,6 +13,7 @@
     font-size: 4vh;
     font-family: roboto;
     /*font-weight: bold;*/
+    z-index: 1;
 }
 
 #ins {
