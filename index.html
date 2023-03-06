@@ -19,7 +19,7 @@
                     console.log('markerFound', markerId);
                     // TODO: Add your own code here to react to the marker being found.
                     var dist = document.getElementById("dist");
-                    if (dist.innerText == "30 meters away" && markerId == "floor")
+                    if (dist.innerText == "30 meters away" && (markerId == "floor" || markerId == "floor2"))
                     dist.innerText = "15 meters away";
 
                     if (dist.innerText == "15 meters away" && markerId == "product") {
@@ -57,6 +57,13 @@
         </a-marker>
 
         <a-marker markerhandler type="pattern" preset="custom" url="https://dzuckersfdc.github.io/location-based-ar-stylebot/assets/pattern-t.patt" id="floor">
+            <a-entity
+                gltf-model="#animated-asset"
+                scale="3 3 3">
+            </a-entity>
+        </a-marker>
+
+        <a-marker markerhandler type="pattern" preset="custom" url="https://dzuckersfdc.github.io/location-based-ar-stylebot/assets/pattern-bin.patt" id="floor2">
             <a-entity
                 gltf-model="#animated-asset"
                 scale="3 3 3">
